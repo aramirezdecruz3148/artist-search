@@ -4,7 +4,7 @@ import SearchArtist from './SearchArtist';
 
 describe('SearchArtist component', () => {
   it('renders SearchArtist', () => {
-    const wrapper = shallow(<SearchArtist artist='me' onInputChange={() => {}} />);
+    const wrapper = shallow(<SearchArtist artist='me' onButtonClick={() => {}} onInputChange={() => {}} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

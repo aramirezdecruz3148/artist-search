@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FindArtistContainer component renders FindArtistContainer 1`] = `
+<Fragment>
+  <SearchArtist
+    artist=""
+    onButtonClick={[Function]}
+    onInputChange={[Function]}
+  />
+  <Artists
+    artistArray={Array []}
+  />
+</Fragment>
+`;

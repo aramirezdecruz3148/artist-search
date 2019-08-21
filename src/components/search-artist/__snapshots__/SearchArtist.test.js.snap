@@ -4,6 +4,7 @@ exports[`SearchArtist component renders SearchArtist 1`] = `
 <Fragment>
   <input
     name="artist"
+    onChange={[Function]}
     type="text"
     value="me"
   />
