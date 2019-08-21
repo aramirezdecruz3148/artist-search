@@ -36,20 +36,8 @@ export default class FindArtistContainer extends Component {
     return  this.fetchArtists();
   }
 
-  increasePageCount = () => {
-    this.setState(state => {
-      return ({
-        page: state.page + 1
-      });
-    });
-  }
-
-  decreasePageCount = () => {
-    this.setState(state => {
-      return ({
-        page: state.page - 1
-      });
-    });
+  changePageCount = (page) => {
+    this.setState({ page });  
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -61,7 +49,8 @@ export default class FindArtistContainer extends Component {
       artistArray, 
       artist, 
       loading, 
-      error
+      error,
+      page
     } = this.state;
 
     if(error) return <h1>Unable to load artists...</h1>;
@@ -74,7 +63,7 @@ export default class FindArtistContainer extends Component {
           onButtonClick ={this.onButtonClick} 
           onInputChange={this.onInputChange} 
         />
-        <Paging onClickPrevious={this.decreasePageCount} onClickNext={this.increasePageCount} />
+        <Paging onClickPrevious={() => this.changePageCount(page - 1)} onClickNext={() => this.changePageCount(page + 1)} />
         <Artists artistArray={artistArray} />
       </>
     );
