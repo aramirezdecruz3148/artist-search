@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Artist({ 
   artistName, 
@@ -7,7 +8,7 @@ function Artist({
 }) {
   return (
     <>
-      <h3>{artistName}</h3>
+      <Link to='/releases'><h3>{artistName}</h3></Link> 
       <p>{artistDeets}</p>
     </>
   );

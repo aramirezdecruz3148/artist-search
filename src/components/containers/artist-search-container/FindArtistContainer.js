@@ -3,8 +3,13 @@ import { getArtists } from '../../../services/getArtistsName';
 import SearchArtist from '../../search-artist/SearchArtist';
 import Artists from '../../artists/Artists';
 import Paging from '../../paging/Paging';
+import PropTypes from 'prop-types';
 
 export default class FindArtistContainer extends Component {
+  static props = {
+    history: PropTypes.array
+  }
+
   state = {
     artistArray: [],
     artist: '',
@@ -14,7 +19,9 @@ export default class FindArtistContainer extends Component {
   }
 
   onInputChange = ({ target }) => {
-    this.setState({ artist: target.value });
+    this.setState({ artist: target.value }, () => {
+      this.props.history.push(`/?query=${this.state.artist}`);
+    });
   }
 
   fetchArtists = () => {
