@@ -6,6 +6,7 @@ function Artists({ artistArray }) {
   const artistList = artistArray.map(({ artistId, artistName, artistDeets }) => (
     <li key={artistId}>
       <Artist
+        artistId={artistId}
         artistName={artistName}
         artistDeets={artistDeets}
       />

@@ -6,8 +6,9 @@ import Paging from '../../paging/Paging';
 import PropTypes from 'prop-types';
 
 export default class FindArtistContainer extends Component {
-  static props = {
-    history: PropTypes.array
+  static propTypes = {
+    history: PropTypes.object,
+    location: PropTypes.object
   }
 
   state = {
@@ -40,11 +41,22 @@ export default class FindArtistContainer extends Component {
 
   onButtonClick = () => {
     this.setState({ loading: true });
-    return  this.fetchArtists();
+    return this.fetchArtists();
   }
 
   changePageCount = (page) => {
     this.setState({ page });  
+  }
+
+  componentDidMount() {
+    const search = new URLSearchParams(this.props.location.search);
+    const query = search.get('query');
+    if(query) {
+      this.setState({ artist: query }, () => {
+        return this.fetchArtists();
+      });
+    }
+
   }
 
   componentDidUpdate(prevProps, prevState) {
