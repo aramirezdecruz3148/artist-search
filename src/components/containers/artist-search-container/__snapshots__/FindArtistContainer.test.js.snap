@@ -7,6 +7,10 @@ exports[`FindArtistContainer component renders FindArtistContainer 1`] = `
     onButtonClick={[Function]}
     onInputChange={[Function]}
   />
+  <Paging
+    onClickNext={[Function]}
+    onClickPrevious={[Function]}
+  />
   <Artists
     artistArray={Array []}
   />
