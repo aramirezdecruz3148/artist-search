@@ -3,7 +3,7 @@ import { getArtists } from '../../../services/getArtistsName';
 import SearchArtist from '../../search-artist/SearchArtist';
 import Artists from '../../artists/Artists';
 
-export default class FindArtistContainer extends class {
+export default class FindArtistContainer extends Component {
   state = {
     artistArray: [],
     artist: '',
@@ -12,7 +12,7 @@ export default class FindArtistContainer extends class {
   }
 
   onInputChange = ({ target }) => {
-    this.setState({ artist: target.value})
+    this.setState({ artist: target.value });
   }
 
   fetchArtists = () => {
