@@ -12,7 +12,7 @@ function Artist({ artistName, artistDeets }) {
 
 Artist.propTypes = {
   artistName: PropTypes.string.isRequired,
-  artistDeets: PropTypes.string.isRequired
+  artistDeets: PropTypes.string
 };
 
 export default Artist;

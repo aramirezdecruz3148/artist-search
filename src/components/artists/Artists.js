@@ -23,7 +23,7 @@ Artists.propTypes = {
   artistArray: PropTypes.arrayOf(PropTypes.shape({
     artistId: PropTypes.string.isRequired,
     artistName: PropTypes.string.isRequired,
-    artistDeets: PropTypes.string.isRequired
+    artistDeets: PropTypes.string
   })).isRequired
 };
 

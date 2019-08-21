@@ -7,7 +7,7 @@ export default class FindArtistContainer extends Component {
   state = {
     artistArray: [],
     artist: '',
-    loading: true, 
+    loading: false, 
     error: null
   }
 
@@ -17,9 +17,9 @@ export default class FindArtistContainer extends Component {
 
   fetchArtists = () => {
     return getArtists(this.state.artist) 
-      .then(({ artists }) => {
+      .then(({ singers }) => {
         this.setState({ 
-          artistArray: artists, 
+          artistArray: singers, 
           loading: false 
         });
       })
@@ -31,10 +31,6 @@ export default class FindArtistContainer extends Component {
 
   onButtonClick = () => {
     return  this.fetchArtists();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if(prevState.artist !== this.state.artist) return this.fetchArtists();
   }
 
   render() {
