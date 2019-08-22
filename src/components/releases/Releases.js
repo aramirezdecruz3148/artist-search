@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Release from './Release';
 import placeholderImage from '../../assets/CoverPlaceholder.png';
 
-function Releases({ releaseArray }) {
+function Releases({ releaseArray, artistName }) {
   const releaseList = releaseArray.map(({ releaseId, releaseDate, releaseTitle, coverArtCount }) => (
     <li key={releaseId}>
       <Release 
@@ -11,6 +11,7 @@ function Releases({ releaseArray }) {
         releaseCover={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front` : placeholderImage }
         releaseDate={releaseDate}
         releaseTitle={releaseTitle}
+        artistName={artistName}
       />
     </li>
   ));
@@ -25,9 +26,10 @@ Releases.propTypes = {
   releaseArray: PropTypes.arrayOf(PropTypes.shape({
     releaseId: PropTypes.string.isRequired,
     releaseTitle: PropTypes.string.isRequired,
-    releaseDate: PropTypes.string.isRequired
+    releaseDate: PropTypes.string.isRequired,
+    coverArtCount: PropTypes.bool.isRequired
   })).isRequired,
-  coverArtCount: PropTypes.bool
+  artistName: PropTypes.string.isRequired
 };
 
 export default Releases;

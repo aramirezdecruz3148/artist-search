@@ -8,7 +8,7 @@ export default class ReleaseContainer extends Component {
   static propTypes = {
     match: PropTypes.object,
     history: PropTypes.object,
-    location: PropTypes.object
+    location: PropTypes.object,
   }
 
   state = {
@@ -16,7 +16,7 @@ export default class ReleaseContainer extends Component {
     loading: true,
     page: 1,
     totalPages: 1,
-    error: null
+    error: null,
   }
 
   fetchReleases = () => {
@@ -36,7 +36,7 @@ export default class ReleaseContainer extends Component {
 
   changePageCount = (page) => {
     this.setState({ page }); 
-    this.props.history.push(`/releases/${this.props.match.params.id}?page=${page}`); 
+    this.props.history.push(`/releases/${this.state.artistName}/${this.props.match.params.artistId}?page=${page}`); 
   }
 
   componentDidMount() {
@@ -53,6 +53,7 @@ export default class ReleaseContainer extends Component {
   }
 
   render() {
+    console.log(this.props.match.params.artistName)
     const { 
       releaseArray, 
       page, 
@@ -74,7 +75,7 @@ export default class ReleaseContainer extends Component {
           currentPage={page}
           totalPages={totalPages}
         />
-        <Releases releaseArray={releaseArray} />
+        <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
       </>
     );
   }
