@@ -28,7 +28,7 @@ export const getArtistReleases = (artistId) => {
       const albums = releases.map(album => ({
         releaseId: album.id,
         releaseTitle: album.title,
-        releaseDate: album['release-events'].date
+        releaseDate: album['release-events'][0].date
       }));
       return {
         albums

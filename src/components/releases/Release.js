@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import placeholder from '../../assets/CoverPlaceholder.png';
 
 function Release({ releaseId, releaseTitle, releaseDate = 'unknown' }) {
   return (
     <>
       <img src={`http://coverartarchive.org/release/${releaseId}/front`} />
-      <h3>{releaseTitle}{releaseId}</h3>
-      <h5>Date released: {releaseDate}</h5>
+      <h3>{releaseTitle}</h3>
+      <h5>Release Date: {releaseDate}</h5>
     </>
   );
 }
