@@ -6,7 +6,9 @@ import Paging from '../../paging/Paging';
 
 export default class ReleaseContainer extends Component {
   static propTypes = {
-    match: PropTypes.object
+    match: PropTypes.object,
+    history: PropTypes.object,
+    location: PropTypes.object
   }
 
   state = {
@@ -33,11 +35,17 @@ export default class ReleaseContainer extends Component {
   }
 
   changePageCount = (page) => {
-    this.setState({ page });  
+    this.setState({ page }); 
+    this.props.history.push(`/releases/${this.props.match.params.id}?page=${page}`); 
   }
 
   componentDidMount() {
     this.fetchReleases();
+    const pageSearch = new URLSearchParams(this.props.location.search);
+    const page = parseInt(pageSearch.get('page')) || 1;
+    if(pageSearch) {
+      this.setState({ page });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
