@@ -17,8 +17,8 @@ export const getArtists = (artistName, page) => {
     });
 };
 
-export const getArtistReleases = (artistId) => {
-  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`)
+export const getArtistReleases = (artistId, page) => {
+  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json&limit=25&offset=${(page - 1) * 25}`)
     .then(res => {
       if(!res.ok) throw 'Unable to load releases, try again!';
 
