@@ -47,18 +47,19 @@ export default class FindArtistContainer extends Component {
   }
 
   changePageCount = (page) => {
-    this.setState({ page });  
+    this.setState({ page }); 
+    this.props.history.push(`/?query=${this.state.artist}&page=${page}`);
   }
 
   componentDidMount() {
-    const search = new URLSearchParams(this.props.location.search);
-    const query = search.get('query');
-    if(query) {
-      this.setState({ artist: query }, () => {
+    const searchArtist = new URLSearchParams(this.props.location.search);
+    const queryArtist = searchArtist.get('query');
+    const page = parseInt(searchArtist.get('page')) || 1;
+    if(queryArtist) {
+      this.setState({ artist: queryArtist, page }, () => {
         return this.fetchArtists();
       });
     }
-
   }
 
   componentDidUpdate(prevProps, prevState) {
