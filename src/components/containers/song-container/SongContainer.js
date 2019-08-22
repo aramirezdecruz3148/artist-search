@@ -15,7 +15,7 @@ export default class SongContainer extends Component {
   }
 
   fetchSongs = () => {
-    return getSongs(this.props.match.params.id)
+    return getSongs(this.props.match.params.releaseId)
       .then(({ songs }) => {
         this.setState({
           songsArray: songs,

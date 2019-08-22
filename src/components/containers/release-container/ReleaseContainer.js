@@ -20,7 +20,7 @@ export default class ReleaseContainer extends Component {
   }
 
   fetchReleases = () => {
-    return getArtistReleases(this.props.match.params.id, this.state.page)
+    return getArtistReleases(this.props.match.params.artistId, this.state.page)
       .then(({ totalPages, albums }) => {
         this.setState({
           releaseArray: albums,

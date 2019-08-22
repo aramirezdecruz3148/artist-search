@@ -9,7 +9,7 @@ function Artist({
 }) {
   return (
     <>
-      <Link to={`/releases/${artistId}`}><h3>{artistName}</h3></Link> 
+      <Link to={`/releases/${artistName}/${artistId}`}><h3>{artistName}</h3></Link> 
       <p>{artistDeets}</p>
     </>
   );
