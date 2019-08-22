@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Songs component renders Songs 1`] = `
+<ul>
+  <li
+    key="sdsd44234"
+  >
+    <Song
+      songTitle="ekkjnw"
+    />
+  </li>
+  <li
+    key="sdsd44234"
+  >
+    <Song
+      songTitle="234234n"
+    />
+  </li>
+</ul>
+`;

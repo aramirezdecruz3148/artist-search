@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Song component renders Song 1`] = `
+<Fragment>
+  <h3>
+    string
+  </h3>
+</Fragment>
+`;
