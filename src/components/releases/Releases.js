@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Release from './Release';
+import placeholderImage from '../../assets/CoverPlaceholder.png';
 
 function Releases({ releaseArray }) {
-  const releaseList = releaseArray.map(({ releaseId, releaseDate, releaseTitle }) => (
+  const releaseList = releaseArray.map(({ releaseId, releaseDate, releaseTitle, coverArtCount }) => (
     <li key={releaseId}>
       <Release 
-        releaseId={releaseId}
+        releaseId={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front` : placeholderImage }
         releaseDate={releaseDate}
         releaseTitle={releaseTitle}
       />
@@ -24,7 +25,8 @@ Releases.propTypes = {
     releaseId: PropTypes.string.isRequired,
     releaseTitle: PropTypes.string.isRequired,
     releaseDate: PropTypes.string
-  })).isRequired
+  })).isRequired,
+  coverArtCount: PropTypes.number.isRequired
 };
 
 export default Releases;

@@ -28,7 +28,8 @@ export const getArtistReleases = (artistId) => {
       const albums = releases.map(album => ({
         releaseId: album.id,
         releaseTitle: album.title,
-        releaseDate: album['release-events'][0].date
+        releaseDate: album['release-events'][0].date,
+        coverArtCount: album['cover-art-archive'].front
       }));
       return {
         albums
