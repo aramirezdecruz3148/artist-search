@@ -5,7 +5,12 @@ exports[`App component renders App 1`] = `
   <BrowserRouter>
     <Route
       component={[Function]}
+      exact={true}
       path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/releases/:id"
     />
   </BrowserRouter>
 </Fragment>
