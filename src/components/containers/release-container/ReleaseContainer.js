@@ -13,15 +13,17 @@ export default class ReleaseContainer extends Component {
     releaseArray: [],
     loading: true,
     page: 1,
+    totalPages: 1,
     error: null
   }
 
   fetchReleases = () => {
     return getArtistReleases(this.props.match.params.id, this.state.page)
-      .then(({ albums }) => {
+      .then(({ totalPages, albums }) => {
         this.setState({
           releaseArray: albums,
-          loading: false
+          loading: false,
+          totalPages: Math.ceil(totalPages / 25)
         });
       })
       .catch(err => this.setState({
@@ -43,14 +45,27 @@ export default class ReleaseContainer extends Component {
   }
 
   render() {
-    const { releaseArray, page, error, loading } = this.state;
+    const { 
+      releaseArray, 
+      page, 
+      error, 
+      loading,
+      totalPages 
+    } = this.state;
 
     if(error) return <h1>Unable to load releases...</h1>;
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
 
     return (
       <>
-        <Paging onClickPrevious={() => this.changePageCount(page - 1)} onClickNext={() => this.changePageCount(page + 1)}/>
+        <Paging 
+          onClickPrevious={() => this.changePageCount(page - 1)} 
+          onClickNext={() => this.changePageCount(page + 1)}
+          disableNext={totalPages === page}
+          disablePrev={page === 1}
+          currentPage={page}
+          totalPages={totalPages}
+        />
         <Releases releaseArray={releaseArray} />
       </>
     );

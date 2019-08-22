@@ -26,15 +26,17 @@ export const getArtistReleases = (artistId, page) => {
 
       return res.json();
     })
-    .then(({ releases }) => {
-      const albums = releases.map(album => ({
+    .then((data) => {
+      const totalPages = data['release-count'];
+      const albums = data.releases.map(album => ({
         releaseId: album.id,
         releaseTitle: album.title,
         releaseDate: album['release-events'][0].date,
         coverArtCount: album['cover-art-archive'].front
       }));
       return {
-        albums
+        albums,
+        totalPages
       };
     });
 };
