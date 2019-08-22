@@ -14,7 +14,7 @@ function Release({ releaseId, releaseTitle, releaseDate = 'unknown' }) {
 Release.propTypes = {
   releaseId: PropTypes.string.isRequired,
   releaseTitle: PropTypes.string.isRequired,
-  releaseDate: PropTypes.string
+  releaseDate: PropTypes.string.isRequired
 };
 
 export default Release;

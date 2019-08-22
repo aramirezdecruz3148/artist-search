@@ -17,7 +17,6 @@ export default class ReleaseContainer extends Component {
   fetchReleases = () => {
     return getArtistReleases(this.props.match.params.id)
       .then(({ albums }) => {
-        console.log(albums)
         this.setState({
           releaseArray: albums,
           loading: false
@@ -35,7 +34,6 @@ export default class ReleaseContainer extends Component {
 
   //for state I am going to need page, error, loading
   //will need to reuse the paging component
-  //will need to render this inside of a route in app
   render() {
     const { releaseArray } = this.state;
     return (

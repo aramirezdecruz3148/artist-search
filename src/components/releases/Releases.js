@@ -24,9 +24,9 @@ Releases.propTypes = {
   releaseArray: PropTypes.arrayOf(PropTypes.shape({
     releaseId: PropTypes.string.isRequired,
     releaseTitle: PropTypes.string.isRequired,
-    releaseDate: PropTypes.string
+    releaseDate: PropTypes.string.isRequired
   })).isRequired,
-  coverArtCount: PropTypes.number.isRequired
+  coverArtCount: PropTypes.bool
 };
 
 export default Releases;
