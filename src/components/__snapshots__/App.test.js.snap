@@ -2,6 +2,11 @@
 
 exports[`App component renders App 1`] = `
 <Fragment>
-  <FindArtistContainer />
+  <BrowserRouter>
+    <Route
+      component={[Function]}
+      path="/"
+    />
+  </BrowserRouter>
 </Fragment>
 `;
