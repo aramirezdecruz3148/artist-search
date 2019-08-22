@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getArtists } from '../../../services/getArtistsName';
+import { getArtists } from '../../../services/getArtistsDeetsApi';
 import SearchArtist from '../../search-artist/SearchArtist';
 import Artists from '../../artists/Artists';
 import Paging from '../../paging/Paging';

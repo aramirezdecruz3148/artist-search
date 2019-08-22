@@ -16,3 +16,22 @@ export const getArtists = (artistName, page) => {
       };
     });
 };
+
+export const getArtistReleases = (artistId) => {
+  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`)
+    .then(res => {
+      if(!res.ok) throw 'Unable to load releases, try again!';
+
+      return res.json();
+    })
+    .then(({ releases }) => {
+      const albums = releases.map(album => ({
+        releaseId: album.id,
+        releaseTitle: album.title,
+        releaseDate: album['release-events'].date
+      }));
+      return {
+        albums
+      };
+    });
+};
