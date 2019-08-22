@@ -23,7 +23,7 @@ Releases.propTypes = {
   releaseArray: PropTypes.arrayOf(PropTypes.shape({
     releaseId: PropTypes.string.isRequired,
     releaseTitle: PropTypes.string.isRequired,
-    releaseDate: PropTypes.string.isRequired
+    releaseDate: PropTypes.string
   })).isRequired
 };
 
