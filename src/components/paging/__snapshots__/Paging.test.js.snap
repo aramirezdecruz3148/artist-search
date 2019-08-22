@@ -3,11 +3,19 @@
 exports[`Paging component renders Paging 1`] = `
 <span>
   <button
+    disabled={9}
     onClick={[Function]}
   >
     ⇦
   </button>
+  <p>
+    Page 
+    10
+     of 
+    3
+  </p>
   <button
+    disabled={9}
     onClick={[Function]}
   >
     ⇨
