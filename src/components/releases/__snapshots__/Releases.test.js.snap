@@ -7,12 +7,14 @@ exports[`Releases component renders Releases 1`] = `
   >
     <Release
       releaseDate="Jan. 31st, 1987"
-      releaseId="1231"
+      releaseId="/path/image"
       releaseTitle="name"
     />
   </li>
   <li>
-    <Release />
+    <Release
+      releaseId="/path/image"
+    />
   </li>
 </ul>
 `;

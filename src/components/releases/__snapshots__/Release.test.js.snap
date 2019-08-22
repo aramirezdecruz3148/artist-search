@@ -3,14 +3,13 @@
 exports[`Release component renders Release 1`] = `
 <Fragment>
   <img
-    src="http://coverartarchive.org/release/234j2h3b4j2/front"
+    src="234j2h3b4j2"
   />
   <h3>
     My life
-    234j2h3b4j2
   </h3>
   <h5>
-    Date released: 
+    Release Date: 
     March 14th, 1988
   </h5>
 </Fragment>
