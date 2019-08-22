@@ -4,7 +4,7 @@ import Songs from './Songs';
 
 describe('Songs component', () => {
   it('renders Songs', () => {
-    const wrapper = shallow(<Songs songId='sdsd44234' songsArray={[{ songTitle: 'ekkjnw' }, { songTitle: '234234n' }]} />);
+    const wrapper = shallow(<Songs songsArray={[{ songId:'sdsd44234', songTitle: 'ekkjnw' }, { songId:'sdsd44234', songTitle: '234234n' }]} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
