@@ -33,13 +33,14 @@ export default class SongContainer extends Component {
   }
 
   render() {
+    console.log(this.props.match.params.artistName)
     const { songsArray, error, loading } = this.state;
 
     if(error) return <h1>Unable to load releases...</h1>;
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
     
     return (
-      <Songs songsArray={songsArray} />
+      <Songs artistName={this.props.match.params.artistName} songsArray={songsArray} />
     );
   }
 }
