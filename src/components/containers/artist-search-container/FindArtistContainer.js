@@ -42,7 +42,7 @@ export default class FindArtistContainer extends Component {
   }
 
   onButtonClick = () => {
-    this.setState({ loading: true, page: this.state.page });
+    this.setState({ loading: true, page: 1 });
     return this.fetchArtists();
   }
 
