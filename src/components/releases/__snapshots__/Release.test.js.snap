@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Release component renders Release 1`] = `
+<Fragment>
+  <img
+    src="http://coverartarchive.org/release/234j2h3b4j2/front"
+  />
+  <h3>
+    My life
+  </h3>
+  <h5>
+    Date released: 
+    March 14th, 1988
+  </h5>
+</Fragment>
+`;
