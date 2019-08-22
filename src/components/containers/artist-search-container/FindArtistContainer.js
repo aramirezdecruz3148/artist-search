@@ -16,7 +16,8 @@ export default class FindArtistContainer extends Component {
     artist: '',
     loading: false, 
     error: null, 
-    page: 1
+    page: 1,
+    totalPages: 1
   }
 
   onInputChange = ({ target }) => {
@@ -27,10 +28,11 @@ export default class FindArtistContainer extends Component {
 
   fetchArtists = () => {
     return getArtists(this.state.artist, this.state.page) 
-      .then(({ singers }) => {
+      .then(({ totalPages, singers }) => {
         this.setState({ 
           artistArray: singers, 
-          loading: false 
+          loading: false,
+          totalPages: Math.ceil(totalPages / 25)
         });
       })
       .catch(err => this.setState({ 
@@ -40,7 +42,7 @@ export default class FindArtistContainer extends Component {
   }
 
   onButtonClick = () => {
-    this.setState({ loading: true });
+    this.setState({ loading: true, page: this.state.page });
     return this.fetchArtists();
   }
 
@@ -69,7 +71,8 @@ export default class FindArtistContainer extends Component {
       artist, 
       loading, 
       error,
-      page
+      page,
+      totalPages
     } = this.state;
 
     if(error) return <h1>Unable to load artists...</h1>;
@@ -82,7 +85,14 @@ export default class FindArtistContainer extends Component {
           onButtonClick ={this.onButtonClick} 
           onInputChange={this.onInputChange} 
         />
-        <Paging onClickPrevious={() => this.changePageCount(page - 1)} onClickNext={() => this.changePageCount(page + 1)} />
+        <Paging 
+          onClickPrevious={() => this.changePageCount(page - 1)} 
+          onClickNext={() => this.changePageCount(page + 1)} 
+          disableNext={totalPages === page}
+          disablePrev={page === 1}
+          currentPage={page}
+          totalPages={totalPages}
+        />
         <Artists artistArray={artistArray} />
       </>
     );

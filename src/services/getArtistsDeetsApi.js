@@ -5,14 +5,16 @@ export const getArtists = (artistName, page) => {
 
       return res.json();
     })
-    .then(({ artists }) => {
+    .then(({ count, artists }) => { 
+      const totalPages = count;
       const singers = artists.map(singer => ({
         artistId: singer.id,
         artistName: singer.name,
         artistDeets: singer.disambiguation
       }));
       return {
-        singers
+        singers, 
+        totalPages
       };
     });
 };
