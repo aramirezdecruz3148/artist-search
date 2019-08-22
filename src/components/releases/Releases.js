@@ -7,7 +7,8 @@ function Releases({ releaseArray }) {
   const releaseList = releaseArray.map(({ releaseId, releaseDate, releaseTitle, coverArtCount }) => (
     <li key={releaseId}>
       <Release 
-        releaseId={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front` : placeholderImage }
+        releaseId={releaseId}
+        releaseCover={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front` : placeholderImage }
         releaseDate={releaseDate}
         releaseTitle={releaseTitle}
       />
