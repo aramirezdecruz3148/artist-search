@@ -6,7 +6,7 @@ function Release() {
 }
 
 Release.propTypes = {
-
+  //going to need releaseId, releaseTitle, releaseDate
 };
 
 export default Release;

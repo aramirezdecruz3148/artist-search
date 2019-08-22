@@ -6,7 +6,8 @@ function Releases() {
 }
 
 Releases.propTypes = {
-
+  //a releaseArray which takes an object with the props
+  //from release
 };
 
 export default Releases;
