@@ -11,9 +11,13 @@ exports[`Releases component renders Releases 1`] = `
       releaseTitle="name"
     />
   </li>
-  <li>
+  <li
+    key="uiiuhh"
+  >
     <Release
+      releaseDate="5/8/13"
       releaseId="/path/image"
+      releaseTitle="someone"
     />
   </li>
 </ul>
