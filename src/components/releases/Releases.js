@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Release from './release';
+import Release from './Release';
 
 function Releases({ releaseArray }) {
   const releaseList = releaseArray.map(({ releaseId, releaseDate, releaseTitle }) => (
