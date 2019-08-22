@@ -3,11 +3,15 @@
 exports[`Release component renders Release 1`] = `
 <Fragment>
   <img
-    src="234j2h3b4j2"
+    src="string"
   />
-  <h3>
-    My life
-  </h3>
+  <Link
+    to="/songs/234j2h3b4j2"
+  >
+    <h3>
+      My life
+    </h3>
+  </Link>
   <h5>
     Release Date: 
     March 14th, 1988

@@ -6,8 +6,9 @@ exports[`Releases component renders Releases 1`] = `
     key="1231"
   >
     <Release
+      releaseCover="/path/image"
       releaseDate="Jan. 31st, 1987"
-      releaseId="/path/image"
+      releaseId="1231"
       releaseTitle="name"
     />
   </li>
@@ -15,8 +16,9 @@ exports[`Releases component renders Releases 1`] = `
     key="uiiuhh"
   >
     <Release
+      releaseCover="/path/image"
       releaseDate="5/8/13"
-      releaseId="/path/image"
+      releaseId="uiiuhh"
       releaseTitle="someone"
     />
   </li>
