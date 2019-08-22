@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Releases component renders Releases 1`] = `
+<ul>
+  <li
+    key="1231"
+  >
+    <Release
+      releaseDate="Jan. 31st, 1987"
+      releaseId="1231"
+      releaseTitle="name"
+    />
+  </li>
+  <li>
+    <Release />
+  </li>
+</ul>
+`;
