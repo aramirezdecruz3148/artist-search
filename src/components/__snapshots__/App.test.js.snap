@@ -10,11 +10,11 @@ exports[`App component renders App 1`] = `
     />
     <Route
       component={[Function]}
-      path="/releases/:id"
+      path="/releases/:artistName/:artistId"
     />
     <Route
       component={[Function]}
-      path="/songs/:id"
+      path="/songs/:artistName/:releaseId"
     />
   </BrowserRouter>
 </Fragment>

@@ -6,7 +6,8 @@ exports[`Releases component renders Releases 1`] = `
     key="1231"
   >
     <Release
-      releaseCover="/path/image"
+      artistName="werwerw"
+      releaseCover="http://coverartarchive.org/release/1231/front"
       releaseDate="Jan. 31st, 1987"
       releaseId="1231"
       releaseTitle="name"
@@ -16,7 +17,8 @@ exports[`Releases component renders Releases 1`] = `
     key="uiiuhh"
   >
     <Release
-      releaseCover="/path/image"
+      artistName="werwerw"
+      releaseCover="http://coverartarchive.org/release/uiiuhh/front"
       releaseDate="5/8/13"
       releaseId="uiiuhh"
       releaseTitle="someone"

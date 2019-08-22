@@ -4,7 +4,7 @@ import Song from './Song';
 
 describe('Song component', () => {
   it('renders Song', () => {
-    const wrapper = shallow(<Song songTitle='string' />);
+    const wrapper = shallow(<Song artistName='werwer' songTitle='string' />);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -3,7 +3,7 @@
 exports[`Artist component renders Artist 1`] = `
 <Fragment>
   <Link
-    to="/releases/stuff"
+    to="/releases/me/stuff"
   >
     <h3>
       me

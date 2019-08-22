@@ -6,7 +6,7 @@ exports[`Release component renders Release 1`] = `
     src="string"
   />
   <Link
-    to="/songs/234j2h3b4j2"
+    to="/songs/werwerw/234j2h3b4j2"
   >
     <h3>
       My life

@@ -6,6 +6,7 @@ exports[`Songs component renders Songs 1`] = `
     key="sdsd44234"
   >
     <Song
+      artistName="werwerw"
       songTitle="ekkjnw"
     />
   </li>
@@ -13,6 +14,7 @@ exports[`Songs component renders Songs 1`] = `
     key="sdsd44234"
   >
     <Song
+      artistName="werwerw"
       songTitle="234234n"
     />
   </li>
