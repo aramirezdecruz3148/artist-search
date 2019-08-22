@@ -40,3 +40,21 @@ export const getArtistReleases = (artistId, page) => {
       };
     });
 };
+
+export const getSongs = (releaseId) => {
+  return fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`)
+    .then(res => {
+      if(!res.ok) throw 'Unable to load songs, try again!';
+
+      return res.json();
+    })
+    .then(({ recordings }) => {
+      const songs = recordings.map(song => ({
+        songId: song.id,
+        songTitle: song.title
+      }));
+      return {
+        songs
+      };
+    });
+};
