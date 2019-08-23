@@ -11,7 +11,7 @@ export default function App() {
     <Router>
       <Route exact path='/' component={FindArtistContainer} />
       <Route path='/releases/:artistName/:artistId' component={ReleaseContainer} />
-      <Route path='/songs/:artistName/:releaseId' component={SongContainer} />
+      <Route path='/songs/:artistName/:releaseId/:releaseTitle' component={SongContainer} />
       <Route path ='/lyrics/:artistName/:songTitle' component={LyricContainer} />
     </Router>
     </>

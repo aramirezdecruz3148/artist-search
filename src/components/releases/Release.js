@@ -12,7 +12,7 @@ function Release({
   return (
     <>
       <img src={releaseCover} />
-      <Link to={`/songs/${artistName}/${releaseId}`}><h3>{releaseTitle}</h3></Link>
+      <Link to={`/songs/${artistName}/${releaseId}/${releaseTitle}`}><h3>{releaseTitle}</h3></Link>
       <h5>Release Date: {releaseDate}</h5>
     </>
   );

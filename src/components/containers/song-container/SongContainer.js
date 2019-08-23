@@ -47,7 +47,7 @@ export default class SongContainer extends Component {
 
     return (
       <>
-        <h2>Songs by {this.props.match.params.artistName}</h2>
+        <h2>Songs from {this.props.match.params.releaseTitle} by {this.props.match.params.artistName}</h2>
         <Nav />
         <Songs artistName={this.props.match.params.artistName} songsArray={songsArray} />
       </>
