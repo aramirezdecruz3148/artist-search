@@ -2,10 +2,20 @@
 
 exports[`Lyrics component renders Lyrics 1`] = `
 <section>
-  <h3>
-    title
+  <h3
+    className="lyricsh3"
+  >
+    Lyrics   for   
+    <em>
+      title
+    </em>
+        by  
+    werw
   </h3>
-  <pre>
+  <Nav />
+  <pre
+    className="lyricspre"
+  >
     lyrics
   </pre>
 </section>

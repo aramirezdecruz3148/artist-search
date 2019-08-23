@@ -3,9 +3,12 @@
 exports[`Song component renders Song 1`] = `
 <Fragment>
   <Link
+    className="songlink"
     to="/lyrics/werwer/string"
   >
-    <h3>
+    <h3
+      className="song"
+    >
       string
     </h3>
   </Link>
