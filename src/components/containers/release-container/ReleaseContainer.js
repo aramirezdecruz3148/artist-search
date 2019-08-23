@@ -64,6 +64,12 @@ export default class ReleaseContainer extends Component {
 
     if(error) return <h1>Unable to load releases...</h1>;
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
+    if(totalPages === 1) return (
+      <>
+        <Nav />
+        <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
+      </>
+    );
 
     return (
       <>
