@@ -4,6 +4,7 @@ import { getArtistReleases } from '../../../services/getArtistsDeetsApi';
 import Releases from '../../releases/Releases';
 import Paging from '../../paging/Paging';
 import Nav from '../nav/Nav';
+import styles from './ReleaseContainer.css';
 
 export default class ReleaseContainer extends Component {
   static propTypes = {
@@ -63,26 +64,30 @@ export default class ReleaseContainer extends Component {
     } = this.state;
 
     if(error) return (
-      <>
+      <div className={styles.releaseContainer}>
         <Nav />
-        <h3>Sorry,&nbsp;&nbsp; there&nbsp;&nbsp; is&nbsp;&nbsp; no&nbsp;&nbsp; information&nbsp;&nbsp; on&nbsp;&nbsp; this&nbsp;&nbsp; artist,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
+        <h3 className={styles.titleh3}>Sorry,&nbsp;&nbsp; there&nbsp;&nbsp; is&nbsp;&nbsp; no&nbsp;&nbsp; information&nbsp;&nbsp; on&nbsp;&nbsp; this&nbsp;&nbsp; artist,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
-      </>
+      </div>
     );
-    if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
+    if(loading) return (
+      <div className={styles.releaseContainer}>
+        <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
+      </div>
+    );
     if(totalPages === 1) return (
-      <>
-        <h2>Releases&nbsp;&nbsp; for&nbsp;&nbsp; {this.props.match.params.artistName}</h2>
+      <div>
+        <h2 className={StyleSheet.titleh3}>Releases&nbsp;&nbsp; for&nbsp;&nbsp; {this.props.match.params.artistName}</h2>
         <Nav />
         <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
-      </>
+      </div>
     );
     if(totalPages === 0) return (
-      <>
+      <div className={styles.releaseContainer}>
         <Nav />
-        <h3>Sorry,&nbsp;&nbsp; there&nbsp;&nbsp; is&nbsp;&nbsp; no&nbsp;&nbsp; information&nbsp;&nbsp; on&nbsp;&nbsp; this&nbsp;&nbsp; artist,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
+        <h3 className={styles.titleh3}>Sorry,&nbsp;&nbsp; there&nbsp;&nbsp; is&nbsp;&nbsp; no&nbsp;&nbsp; information&nbsp;&nbsp; on&nbsp;&nbsp; this&nbsp;&nbsp; artist,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
-      </>
+      </div>
     );
 
     return (
