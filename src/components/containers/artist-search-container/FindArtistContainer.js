@@ -111,7 +111,7 @@ export default class FindArtistContainer extends Component {
 
     return (
       <div className={styles.findArtist}>
-        <h2 className={styles.titleh2}>Search&nbsp;&nbsp; for&nbsp;&nbsp; your&nbsp;&nbsp; favorite&nbsp;&nbsp; recording&nbsp;&nbsp; artist</h2>
+        <h2 className={styles.titleh2}>Find&nbsp;&nbsp; for&nbsp;&nbsp; your&nbsp;&nbsp; favorite&nbsp;&nbsp; recording&nbsp;&nbsp; artist</h2>
         <SearchArtist 
           artist={artist} 
           onButtonClick ={this.onButtonClick} 
