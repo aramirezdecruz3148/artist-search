@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Lyrics from '../../Lyrics.js/Lyrics';
 import PropTypes from 'prop-types';
 import { getLyrics } from '../../../services/getArtistsDeetsApi';
 import Nav from '../nav/Nav';
 import styles from './LyricContainer.css';
+import Lyrics from '../../lyrics/Lyrics';
 
 export default class LyricContainer extends Component {
   static propTypes = {
