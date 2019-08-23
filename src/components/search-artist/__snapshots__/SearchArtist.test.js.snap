@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchArtist component renders SearchArtist 1`] = `
-<Fragment>
+<div
+  className="searchArtist"
+>
   <input
     name="artist"
     onChange={[Function]}
@@ -13,5 +15,5 @@ exports[`SearchArtist component renders SearchArtist 1`] = `
   >
     Search
   </button>
-</Fragment>
+</div>
 `;

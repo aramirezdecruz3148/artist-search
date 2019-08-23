@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Artists component renders Artists 1`] = `
-<ul>
+<ul
+  className="artists"
+>
   <li
     key="1231"
   >
