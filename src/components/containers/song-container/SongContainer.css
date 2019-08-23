@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One|Viga&display=swap');
+
+.songContainerh2 {
+  font-size: 3vw;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+}
+
+.songContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.songContainer img {
+  width: 40vw;
+}
+
+.titleh3 {
+  font-size: 3vw;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+}

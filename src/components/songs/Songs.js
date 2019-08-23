@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Song from './Song';
+import styles from './Songs.css';
 
 function Songs({ songsArray, artistName }) {
   const songList = songsArray.map(({ songTitle, songId }) => (
@@ -13,7 +14,7 @@ function Songs({ songsArray, artistName }) {
   ));
 
   return (
-    <ul>
+    <ul className={styles.songs}>
       {songList}
     </ul>
   );

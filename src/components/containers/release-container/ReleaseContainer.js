@@ -65,14 +65,14 @@ export default class ReleaseContainer extends Component {
     if(error) return (
       <>
         <Nav />
-        <h3>Sorry, there is no information on this artist, why not try another?</h3>
+        <h3>Sorry,&nbsp;&nbsp; there&nbsp;&nbsp; is&nbsp;&nbsp; no&nbsp;&nbsp; information&nbsp;&nbsp; on&nbsp;&nbsp; this&nbsp;&nbsp; artist,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </>
     );
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
     if(totalPages === 1) return (
       <>
-        <h2>Releases for {this.props.match.params.artistName}</h2>
+        <h2>Releases&nbsp;&nbsp; for&nbsp;&nbsp; {this.props.match.params.artistName}</h2>
         <Nav />
         <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
       </>
@@ -80,7 +80,7 @@ export default class ReleaseContainer extends Component {
     if(totalPages === 0) return (
       <>
         <Nav />
-        <h3>Sorry, there is no information on this artist, why not try another?</h3>
+        <h3>Sorry,&nbsp;&nbsp; there&nbsp;&nbsp; is&nbsp;&nbsp; no&nbsp;&nbsp; information&nbsp;&nbsp; on&nbsp;&nbsp; this&nbsp;&nbsp; artist,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </>
     );

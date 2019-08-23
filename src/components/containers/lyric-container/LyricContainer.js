@@ -46,7 +46,7 @@ export default class LyricContainer extends Component {
     if(error) return (
       <div className={styles.lyricContainer}>
         <Nav />
-        <h3 className={styles.titleh3}>Sorry, the lyrics for this song are not available, why not try another?</h3>
+        <h3 className={styles.titleh3}>Sorry,&nbsp;&nbsp; the&nbsp;&nbsp; lyrics&nbsp;&nbsp; for&nbsp;&nbsp; this&nbsp;&nbsp; song&nbsp;&nbsp; are&nbsp;&nbsp; not&nbsp;&nbsp; available,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </div>
     );
