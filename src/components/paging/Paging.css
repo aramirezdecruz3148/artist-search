@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One|Viga&display=swap');
+
 .paging {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Viga', sans-serif;
+  color: rgb(66, 65, 65);
+  font-size: 1.3vw;
 }

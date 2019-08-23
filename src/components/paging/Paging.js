@@ -13,7 +13,7 @@ function Paging({
   return (
     <div className={styles.paging}>
       <button onClick={onClickPrevious} disabled={disablePrev}>⇦</button>
-      <pre>Page {currentPage} of {totalPages}</pre>
+      <p>Page {currentPage} of {totalPages}</p>
       <button onClick={onClickNext} disabled={disableNext}>⇨</button>
     </div>
   );
