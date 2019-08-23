@@ -77,7 +77,7 @@ export default class ReleaseContainer extends Component {
     );
     if(totalPages === 1) return (
       <div>
-        <h2 className={StyleSheet.titleh3}>Releases&nbsp;&nbsp; for&nbsp;&nbsp; {this.props.match.params.artistName}</h2>
+        <h2 className={styles.titleh3}>Releases&nbsp;&nbsp; for&nbsp;&nbsp; {this.props.match.params.artistName}</h2>
         <Nav />
         <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
       </div>
@@ -92,6 +92,7 @@ export default class ReleaseContainer extends Component {
 
     return (
       <>
+        <h2 className={styles.titleh3}>Releases&nbsp;&nbsp; for&nbsp;&nbsp; {this.props.match.params.artistName}</h2>
         <Nav />
         <Paging 
           onClickPrevious={() => this.changePageCount(page - 1)} 
