@@ -7,6 +7,7 @@
   color: rgb(73, 72, 72);
   text-align: center;
   padding: 2vw;
+  overflow: scroll;
 }
 
 .lyricsh3 {

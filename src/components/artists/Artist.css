@@ -10,6 +10,7 @@
   font-size: 1.4vw;
   font-family: 'Viga', sans-serif;
   font-weight: bolder;
+  overflow: scroll;
 }
 
 .link {
