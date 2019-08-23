@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One&display=swap');
+
+.lyricspre{
+  font-size: 1.7vw;
+  font-family: 'Viga', sans-serif;
+  border: solid .3vw #AFEEEE;
+  color: rgb(73, 72, 72);
+  text-align: center;
+  padding: 2vw;
+}
+
+.lyricsh3 {
+  font-family: 'Monoton', cursive;
+  font-size: 3vw;
+}
