@@ -4,7 +4,7 @@
   font-size: 1.7vw;
   font-family: 'Viga', sans-serif;
   border: solid .3vw #AFEEEE;
-  color: rgb(73, 72, 72);
+  color: rgb(149, 148, 148);
   text-align: center;
   padding: 2vw;
   overflow: scroll;
@@ -13,4 +13,5 @@
 .lyricsh3 {
   font-family: 'Monoton', cursive;
   font-size: 3vw;
+  color: #b7702d;
 }

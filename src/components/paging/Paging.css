@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   font-family: 'Viga', sans-serif;
-  color: rgb(66, 65, 65);
+  color: rgb(149, 148, 148);
   font-size: 1.3vw;
 }
 
@@ -22,6 +22,6 @@
 }
 
 .paging button:hover {
-  background: rgb(146, 146, 146);
+  background: rgb(251, 147, 147);
   color: white;
 }
