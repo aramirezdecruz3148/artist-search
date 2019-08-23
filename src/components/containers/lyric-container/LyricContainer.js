@@ -58,7 +58,6 @@ export default class LyricContainer extends Component {
 
     return (
       <div className={styles.lyricContainer}>
-        <Nav />
         <Lyrics 
           title={this.props.match.params.songTitle} 
           lyrics={lyrics} 
