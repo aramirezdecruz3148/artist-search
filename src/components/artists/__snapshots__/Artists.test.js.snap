@@ -6,7 +6,6 @@ exports[`Artists component renders Artists 1`] = `
     key="1231"
   >
     <Artist
-      artistDeets="they do stuff"
       artistId="1231"
       artistName="name"
     />
@@ -15,7 +14,6 @@ exports[`Artists component renders Artists 1`] = `
     key="uiiuhh"
   >
     <Artist
-      artistDeets="they did stuff too"
       artistId="uiiuhh"
       artistName="someone"
     />

@@ -9,8 +9,5 @@ exports[`Artist component renders Artist 1`] = `
       me
     </h3>
   </Link>
-  <p>
-    stuff
-  </p>
 </Fragment>
 `;

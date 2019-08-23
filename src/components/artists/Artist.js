@@ -4,13 +4,11 @@ import { Link } from 'react-router-dom';
 
 function Artist({ 
   artistId,
-  artistName, 
-  artistDeets = '' 
+  artistName 
 }) {
   return (
     <>
       <Link to={`/releases/${artistName}/${artistId}`}><h3>{artistName}</h3></Link> 
-      <p>{artistDeets}</p>
     </>
   );
 }
@@ -18,7 +16,6 @@ function Artist({
 Artist.propTypes = {
   artistId: PropTypes.string.isRequired,
   artistName: PropTypes.string.isRequired,
-  artistDeets: PropTypes.string
 };
 
 export default Artist;

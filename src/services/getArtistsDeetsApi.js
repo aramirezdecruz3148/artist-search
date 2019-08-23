@@ -9,8 +9,7 @@ export const getArtists = (artistName, page) => {
       const totalPages = count;
       const singers = artists.map(singer => ({
         artistId: singer.id,
-        artistName: singer.name,
-        artistDeets: singer.disambiguation
+        artistName: singer.name
       }));
       return {
         singers, 

@@ -62,20 +62,19 @@ export default class ReleaseContainer extends Component {
       totalPages 
     } = this.state;
 
-    if(error) return <h1>Unable to load releases...</h1>;
+    if(error) return (
+      <>
+        <Nav />
+        <h3>Sorry, there is no information on this artist, why not try another?</h3>
+        <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
+      </>
+    );
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
     if(totalPages === 1) return (
       <>
         <h2>Releases for {this.props.match.params.artistName}</h2>
         <Nav />
         <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
-      </>
-    );
-    if(totalPages === 0) return (
-      <>
-        <Nav />
-        <h3>Sorry, there is no information on this artist, why not try another?</h3>
-        <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </>
     );
 
