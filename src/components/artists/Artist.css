@@ -1,23 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One|Viga&display=swap');
 .artist {
-  height: 8vh;
+  height: 5vw;
   width: 20vw;
   text-align: center;
   margin: 0 3vw 3vw 0;
   padding-top: 3vw;
   border: .2vw solid #AFEEEE;
-  background-color: whitesmoke;
+  font-size: 1.4vw;
+  font-family: 'Viga', sans-serif;
+  font-weight: bolder;
 }
 
 .link {
   text-decoration: none;
-  color: black;
+  color: rgb(78, 78, 78);
 }
 
 .link:hover {
-  color: grey;
+  color: white;
   transform: scale(1.2);
 }
 
 .artist:hover {
   transform: scale(1.2);
+  background: rgb(251, 147, 147);
+  font-size: 1.6vw;
 }

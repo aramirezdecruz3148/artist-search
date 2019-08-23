@@ -4,6 +4,7 @@ import SearchArtist from '../../search-artist/SearchArtist';
 import Artists from '../../artists/Artists';
 import Paging from '../../paging/Paging';
 import PropTypes from 'prop-types';
+import styles from './FindArtistContainer.css';
 
 export default class FindArtistContainer extends Component {
   static propTypes = {
@@ -112,7 +113,7 @@ export default class FindArtistContainer extends Component {
     );
 
     return (
-      <div>
+      <div className={styles.findArtist}>
         <h2>Search for your favorite recording artist</h2>
         <SearchArtist 
           artist={artist} 

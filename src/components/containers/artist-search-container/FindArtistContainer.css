@@ -1,1 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One&display=swap');
 
+.findArtist h2 {
+  font-size: 3vw;
+  font-family: 'Monoton', cursive;
+}
