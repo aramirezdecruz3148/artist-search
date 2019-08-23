@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './Artist.css';
 
 function Artist({ 
   artistId,
-  artistName, 
-  artistDeets = 'No details available for this artist' 
+  artistName 
 }) {
   return (
     <>
-      <Link to={`/releases/${artistId}`}><h3>{artistName}</h3></Link> 
-      <p>{artistDeets}</p>
+      <Link className={styles.link} to={`/releases/${artistName}/${artistId}`}><h3 className={styles.artist}>{artistName}</h3></Link> 
     </>
   );
 }
@@ -18,7 +17,6 @@ function Artist({
 Artist.propTypes = {
   artistId: PropTypes.string.isRequired,
   artistName: PropTypes.string.isRequired,
-  artistDeets: PropTypes.string
 };
 
 export default Artist;

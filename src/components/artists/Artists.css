@@ -1,0 +1,10 @@
+.artists {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.artists li {
+  list-style: none;
+}

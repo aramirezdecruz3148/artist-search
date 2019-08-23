@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Releases component renders Releases 1`] = `
+<ul
+  className="releases"
+>
+  <li
+    key="1231"
+  >
+    <Release
+      artistName="werwerw"
+      releaseCover="http://coverartarchive.org/release/1231/front-250"
+      releaseDate="Jan. 31st, 1987"
+      releaseId="1231"
+      releaseTitle="name"
+    />
+  </li>
+  <li
+    key="uiiuhh"
+  >
+    <Release
+      artistName="werwerw"
+      releaseCover="http://coverartarchive.org/release/uiiuhh/front-250"
+      releaseDate="5/8/13"
+      releaseId="uiiuhh"
+      releaseTitle="someone"
+    />
+  </li>
+</ul>
+`;

@@ -3,14 +3,14 @@
 exports[`Artist component renders Artist 1`] = `
 <Fragment>
   <Link
-    to="/releases/stuff"
+    className="link"
+    to="/releases/me/stuff"
   >
-    <h3>
+    <h3
+      className="artist"
+    >
       me
     </h3>
   </Link>
-  <p>
-    stuff
-  </p>
 </Fragment>
 `;

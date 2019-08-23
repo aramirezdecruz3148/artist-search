@@ -5,33 +5,70 @@ export const getArtists = (artistName, page) => {
 
       return res.json();
     })
-    .then(({ artists }) => {
+    .then(({ count, artists }) => { 
+      const totalPages = count;
       const singers = artists.map(singer => ({
         artistId: singer.id,
-        artistName: singer.name,
-        artistDeets: singer.disambiguation
+        artistName: singer.name
       }));
       return {
-        singers
+        singers, 
+        totalPages
       };
     });
 };
 
-export const getArtistReleases = (artistId) => {
-  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`)
+export const getArtistReleases = (artistId, page) => {
+  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json&limit=25&offset=${(page - 1) * 25}`)
     .then(res => {
       if(!res.ok) throw 'Unable to load releases, try again!';
 
       return res.json();
     })
-    .then(({ releases }) => {
-      const albums = releases.map(album => ({
+    .then((data) => {
+      const totalPages = data['release-count'];
+      const albums = data.releases.map(album => ({
         releaseId: album.id,
         releaseTitle: album.title,
-        releaseDate: album['release-events'].date
+        releaseDate: album['release-events'][0].date,
+        coverArtCount: album['cover-art-archive'].front
       }));
       return {
-        albums
+        albums,
+        totalPages
+      };
+    });
+};
+
+export const getSongs = (releaseId) => {
+  return fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`)
+    .then(res => {
+      if(!res.ok) throw res.status;
+
+      return res.json();
+    })
+    .then(({ recordings }) => {
+      const songs = recordings.map(song => ({
+        songId: song.id,
+        songTitle: song.title
+      }));
+      return {
+        songs
+      };
+    });
+};
+
+export const getLyrics = (artistName, songTitle) => {
+  return fetch(`https://api.lyrics.ovh/v1/${artistName}/${songTitle}`)
+    .then(res => {
+      if(!res.ok) throw 'Unable to load lyrics, try again!';
+
+      return res.json();
+    })
+    .then((data) => {
+      const lyrics = data.lyrics;
+      return {
+        lyrics
       };
     });
 };

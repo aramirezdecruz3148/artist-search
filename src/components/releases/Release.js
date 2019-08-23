@@ -1,20 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import styles from './Release.css';
 
-function Release({ releaseId, releaseTitle, releaseDate }) {
+function Release({ 
+  releaseCover, 
+  releaseId, 
+  releaseTitle, 
+  releaseDate = 'unknown',
+  artistName 
+}) {
   return (
-    <>
-      <img src={`http://coverartarchive.org/release/${releaseId}/front`} />
-      <h3>{releaseTitle}</h3>
-      <h5>Date released: {releaseDate}</h5>
-    </>
+    <div className={styles.release}>
+      <Link className={styles.link} to={`/songs/${artistName}/${releaseId}/${releaseTitle}`}>
+        <img src={releaseCover} />
+        <h3>{releaseTitle} - {releaseDate}</h3>
+      </Link>
+    </div>
   );
 }
 
 Release.propTypes = {
   releaseId: PropTypes.string.isRequired,
   releaseTitle: PropTypes.string.isRequired,
-  releaseDate: PropTypes.string.isRequired
+  releaseDate: PropTypes.string.isRequired,
+  releaseCover: PropTypes.string.isRequired,
+  artistName: PropTypes.string.isRequired
 };
 
 export default Release;

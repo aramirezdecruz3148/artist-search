@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One|Viga&display=swap');
+
+.paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Viga', sans-serif;
+  color: rgb(149, 148, 148);
+  font-size: 1.3vw;
+}
+
+.paging button {
+  width: 4vw;
+  height: 2vw;
+  font-size: 1vw;
+  padding: 0;
+  background: #AFEEEE;
+  color: rgb(93, 93, 93);
+  font-family: 'Viga', sans-serif;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.paging button:hover {
+  background: rgb(251, 147, 147);
+  color: white;
+}

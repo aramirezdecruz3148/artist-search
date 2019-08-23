@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One&display=swap');
+
+.findArtist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleh2 {
+  font-size: 3vw;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  color: #b7702d;
+}
+
+.titleh3 {
+  font-size: 3vw;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  color: #b7702d;
+}
+
+.findArtist img {
+  width: 30vw;
+}

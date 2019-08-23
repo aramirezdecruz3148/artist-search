@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Poiret+One&display=swap');
+
+.releaseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.releaseContainer img {
+  width: 30vw;
+}
+
+.titleh2 {
+  font-size: 3vw;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  color: #b7702d;
+}
+
+.titleh3 {
+  font-size: 3vw;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  color: #b7702d;
+}
