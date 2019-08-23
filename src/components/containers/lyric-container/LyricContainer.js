@@ -24,7 +24,11 @@ export default class LyricContainer extends Component {
           lyrics,
           loading: false
         });
-      });
+      })
+      .catch(err => this.setState({
+        error: err,
+        loading: true
+      }));
   }
 
   componentDidMount() {
@@ -40,6 +44,13 @@ export default class LyricContainer extends Component {
 
     if(error) return <h1>Unable to load releases...</h1>;
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
+    if(resizeBy.status === 404) return (
+      <>
+        <Nav />
+        <h3>Sorry, no lyrics are available for this song, try another!</h3>
+        <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
+      </>
+    );
 
     return (
       <>

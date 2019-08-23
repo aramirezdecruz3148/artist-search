@@ -95,7 +95,7 @@ export default class FindArtistContainer extends Component {
         onButtonClick ={this.onButtonClick} 
         onInputChange={this.onInputChange} 
       />
-      <h3>Sorry, no artists match that name...try search another</h3>
+      <h3>Sorry, no artists match that name, why not try another?</h3>
       <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </>
     );

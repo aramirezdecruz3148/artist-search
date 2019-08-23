@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import FindArtistContainer from './containers/artist-search-container/FindArtistContainer';
-import ReleaseContainer from './containers/release-container/ReleaseContainer';
-import SongContainer from './containers/song-container/SongContainer';
-import LyricContainer from './containers/lyric-container/LyricContainer';
+import FindArtistContainer from '../containers/artist-search-container/FindArtistContainer';
+import ReleaseContainer from '../containers/release-container/ReleaseContainer';
+import SongContainer from '../containers/song-container/SongContainer';
+import LyricContainer from '../containers/lyric-container/LyricContainer';
 
 export default function App() {
   return (
