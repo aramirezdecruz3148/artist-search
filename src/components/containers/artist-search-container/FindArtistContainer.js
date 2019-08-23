@@ -81,7 +81,7 @@ export default class FindArtistContainer extends Component {
     if(error) return (
       <div className={styles.findArtist}>
         <Nav />
-        <h3 className={styles.titleh3}>Sorry, no artists match that name, why not try another?</h3>
+        <h3 className={styles.titleh3}>Sorry,&nbsp;&nbsp; no&nbsp;&nbsp; artists&nbsp;&nbsp; match&nbsp;&nbsp; that&nbsp;&nbsp; name,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </div>
     );
@@ -92,7 +92,7 @@ export default class FindArtistContainer extends Component {
     );
     if(totalPages === 1) return (
       <div className={styles.findArtist}>
-        <h2 className={styles.titleh2}>Find your favorite recording artist...</h2>
+        <h2 className={styles.titleh2}>Find&nbsp;&nbsp; your&nbsp;&nbsp; favorite&nbsp;&nbsp; recording&nbsp;&nbsp; artist...</h2>
         <SearchArtist 
           artist={artist} 
           onButtonClick ={this.onButtonClick} 
@@ -104,14 +104,14 @@ export default class FindArtistContainer extends Component {
     if(totalPages === 0) return (
       <div className={styles.findArtist}>
         <Nav />
-        <h3 className={styles.titleh3}>Sorry, no artists match that name, why not try another?</h3>
+        <h3 className={styles.titleh3}>Sorry,&nbsp;&nbsp; no&nbsp;&nbsp; artists&nbsp;&nbsp; match&nbsp;&nbsp; that&nbsp;&nbsp; name,&nbsp;&nbsp; why&nbsp;&nbsp; not&nbsp;&nbsp; try&nbsp;&nbsp; another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </div>
     );
 
     return (
       <div className={styles.findArtist}>
-        <h2 className={styles.titleh2}>Search for your favorite recording artist</h2>
+        <h2 className={styles.titleh2}>Search&nbsp;&nbsp; for&nbsp;&nbsp; your&nbsp;&nbsp; favorite&nbsp;&nbsp; recording&nbsp;&nbsp; artist</h2>
         <SearchArtist 
           artist={artist} 
           onButtonClick ={this.onButtonClick} 
