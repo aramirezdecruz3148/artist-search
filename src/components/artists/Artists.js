@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Artist from './Artist';
+import styles from './Artists.css';
 
 function Artists({ artistArray }) {
   const artistList = artistArray.map(({ artistId, artistName }) => (
@@ -13,7 +14,7 @@ function Artists({ artistArray }) {
   ));
 
   return (
-    <ul>
+    <ul className={styles.artists}>
       {artistList}
     </ul>
   );

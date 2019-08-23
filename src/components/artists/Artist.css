@@ -1,0 +1,23 @@
+.artist {
+  height: 8vh;
+  width: 20vw;
+  text-align: center;
+  margin: 0 3vw 3vw 0;
+  padding-top: 3vw;
+  border: .2vw solid #AFEEEE;
+  background-color: whitesmoke;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: grey;
+  transform: scale(1.2);
+}
+
+.artist:hover {
+  transform: scale(1.2);
+}

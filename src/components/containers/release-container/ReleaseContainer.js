@@ -77,6 +77,13 @@ export default class ReleaseContainer extends Component {
         <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
       </>
     );
+    if(totalPages === 0) return (
+      <>
+        <Nav />
+        <h3>Sorry, there is no information on this artist, why not try another?</h3>
+        <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
+      </>
+    );
 
     return (
       <>

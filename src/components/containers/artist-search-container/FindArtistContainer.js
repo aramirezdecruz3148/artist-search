@@ -112,7 +112,7 @@ export default class FindArtistContainer extends Component {
     );
 
     return (
-      <>
+      <div>
         <h2>Search for your favorite recording artist</h2>
         <SearchArtist 
           artist={artist} 
@@ -128,7 +128,7 @@ export default class FindArtistContainer extends Component {
           totalPages={totalPages}
         />
         <Artists artistArray={artistArray} />
-      </>
+      </div>
     );
   }
 }
