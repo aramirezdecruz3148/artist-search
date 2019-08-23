@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Lyrics from '../../Lyrics.js/Lyrics';
 import PropTypes from 'prop-types';
 import { getLyrics } from '../../../services/getArtistsDeetsApi';
+import Nav from '../nav/Nav';
 
 export default class LyricContainer extends Component {
   static propTypes = {
@@ -41,10 +42,13 @@ export default class LyricContainer extends Component {
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
 
     return (
-      <Lyrics 
-        title={this.props.match.params.songTitle} 
-        lyrics={lyrics} 
-      />
+      <>
+        <Nav />
+        <Lyrics 
+          title={this.props.match.params.songTitle} 
+          lyrics={lyrics} 
+        />
+      </>
     );
   }
 }

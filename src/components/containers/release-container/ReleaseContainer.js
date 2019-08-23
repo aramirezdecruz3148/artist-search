@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { getArtistReleases } from '../../../services/getArtistsDeetsApi';
 import Releases from '../../releases/Releases';
 import Paging from '../../paging/Paging';
+import Nav from '../nav/Nav';
 
 export default class ReleaseContainer extends Component {
   static propTypes = {
@@ -66,6 +67,7 @@ export default class ReleaseContainer extends Component {
 
     return (
       <>
+        <Nav />
         <Paging 
           onClickPrevious={() => this.changePageCount(page - 1)} 
           onClickNext={() => this.changePageCount(page + 1)}

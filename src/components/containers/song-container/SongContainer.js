@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Songs from '../../songs/Songs';
 import { getSongs } from '../../../services/getArtistsDeetsApi';
+import Nav from '../nav/Nav';
 
 export default class SongContainer extends Component {
   static propTypes = {
@@ -39,7 +40,10 @@ export default class SongContainer extends Component {
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
     
     return (
-      <Songs artistName={this.props.match.params.artistName} songsArray={songsArray} />
+      <>
+        <Nav />
+        <Songs artistName={this.props.match.params.artistName} songsArray={songsArray} />
+      </>
     );
   }
 }

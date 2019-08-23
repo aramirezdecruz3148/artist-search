@@ -1,8 +1,3 @@
-
-//NEED TO: make components to get my lyrics, ALSO need to check
-//why my loading gif isn't working
-
-
 export const getArtists = (artistName, page) => {
   return fetch(`http://musicbrainz.org/ws/2/artist?query=${artistName}&fmt=json&limit=25&offset=${(page - 1) * 25}`)
     .then(res => {
