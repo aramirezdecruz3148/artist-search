@@ -80,6 +80,7 @@ export default class FindArtistContainer extends Component {
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
     if(totalPages === 1) return (
       <>
+        <h2>Search for your favorite recording artist...</h2>
         <SearchArtist 
           artist={artist} 
           onButtonClick ={this.onButtonClick} 
@@ -102,6 +103,7 @@ export default class FindArtistContainer extends Component {
 
     return (
       <>
+        <h2>Search for your favorite recording artist</h2>
         <SearchArtist 
           artist={artist} 
           onButtonClick ={this.onButtonClick} 
