@@ -8,7 +8,7 @@ function Releases({ releaseArray, artistName }) {
     <li key={releaseId}>
       <Release 
         releaseId={releaseId}
-        releaseCover={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front` : placeholderImage }
+        releaseCover={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front-250` : placeholderImage }
         releaseDate={releaseDate}
         releaseTitle={releaseTitle}
         artistName={artistName}

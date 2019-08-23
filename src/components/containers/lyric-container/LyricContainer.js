@@ -57,6 +57,7 @@ export default class LyricContainer extends Component {
         <Lyrics 
           title={this.props.match.params.songTitle} 
           lyrics={lyrics} 
+          artistName={this.props.match.params.artistName}
         />
       </>
     );

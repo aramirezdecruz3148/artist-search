@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Lyrics({ title, lyrics }) {
+function Lyrics({ title, lyrics, artistName }) {
   return (
     <section>
-      <h3>{title}</h3>
+      <h3>Lyrics for {title} by {artistName}</h3>
       <pre>{lyrics}</pre>
     </section>
   );
@@ -12,7 +12,8 @@ function Lyrics({ title, lyrics }) {
 
 Lyrics.propTypes = {
   title: PropTypes.string.isRequired,
-  lyrics: PropTypes.string.isRequired
+  lyrics: PropTypes.string.isRequired,
+  artistName: PropTypes.string.isRequired
 };
 
 export default Lyrics;
