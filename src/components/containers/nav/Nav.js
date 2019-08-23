@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Nav() {
   return (
     <div>
-      <Link to={'/'}><button>Search Artists</button></Link>
+      <a href='/'><button>Search Artists</button></a>
     </div>
   );
 }

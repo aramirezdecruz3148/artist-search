@@ -5,6 +5,7 @@ import Artists from '../../artists/Artists';
 import Paging from '../../paging/Paging';
 import PropTypes from 'prop-types';
 import styles from './FindArtistContainer.css';
+import Nav from '../nav/Nav';
 
 export default class FindArtistContainer extends Component {
   static propTypes = {
@@ -79,11 +80,7 @@ export default class FindArtistContainer extends Component {
 
     if(error) return (
       <>
-        <SearchArtist 
-          artist={artist} 
-          onButtonClick ={this.onButtonClick} 
-          onInputChange={this.onInputChange} 
-        />
+        <Nav />
         <h3>Sorry, no artists match that name, why not try another?</h3>
         <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </>
@@ -102,11 +99,7 @@ export default class FindArtistContainer extends Component {
     );
     if(totalPages === 0) return (
       <>
-      <SearchArtist 
-        artist={artist} 
-        onButtonClick ={this.onButtonClick} 
-        onInputChange={this.onInputChange} 
-      />
+      <Nav />
       <h3>Sorry, no artists match that name, why not try another?</h3>
       <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
       </>
