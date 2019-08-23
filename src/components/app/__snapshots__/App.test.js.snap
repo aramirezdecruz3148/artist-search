@@ -14,7 +14,7 @@ exports[`App component renders App 1`] = `
     />
     <Route
       component={[Function]}
-      path="/songs/:artistName/:releaseId"
+      path="/songs/:artistName/:releaseId/:releaseTitle"
     />
     <Route
       component={[Function]}
