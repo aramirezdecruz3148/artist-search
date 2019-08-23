@@ -8,3 +8,20 @@
   color: rgb(66, 65, 65);
   font-size: 1.3vw;
 }
+
+.paging button {
+  width: 4vw;
+  height: 2vw;
+  font-size: 1vw;
+  padding: 0;
+  background: #AFEEEE;
+  color: rgb(93, 93, 93);
+  font-family: 'Viga', sans-serif;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.paging button:hover {
+  background: rgb(146, 146, 146);
+  color: white;
+}

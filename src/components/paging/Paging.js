@@ -12,9 +12,9 @@ function Paging({
 }) {
   return (
     <div className={styles.paging}>
-      <button onClick={onClickPrevious} disabled={disablePrev}>⇦</button>
+      <button onClick={onClickPrevious} disabled={disablePrev}>Prev</button>
       <p>Page {currentPage} of {totalPages}</p>
-      <button onClick={onClickNext} disabled={disableNext}>⇨</button>
+      <button onClick={onClickNext} disabled={disableNext}>Next</button>
     </div>
   );
 }
