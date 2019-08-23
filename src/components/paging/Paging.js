@@ -10,11 +10,11 @@ function Paging({
   totalPages 
 }) {
   return (
-    <span>
+    <div>
       <button onClick={onClickPrevious} disabled={disablePrev}>⇦</button>
-      <p>Page {currentPage} of {totalPages}</p>
+      <pre>Page {currentPage} of {totalPages}</pre>
       <button onClick={onClickNext} disabled={disableNext}>⇨</button>
-    </span>
+    </div>
   );
 }
 

@@ -33,7 +33,6 @@ export default class SongContainer extends Component {
   }
 
   render() {
-    console.log(this.props.match.params.artistName)
     const { songsArray, error, loading } = this.state;
 
     if(error) return <h1>Unable to load releases...</h1>;

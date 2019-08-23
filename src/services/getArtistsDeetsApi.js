@@ -1,3 +1,8 @@
+
+//NEED TO: make components to get my lyrics, ALSO need to check
+//why my loading gif isn't working
+
+
 export const getArtists = (artistName, page) => {
   return fetch(`http://musicbrainz.org/ws/2/artist?query=${artistName}&fmt=json&limit=25&offset=${(page - 1) * 25}`)
     .then(res => {
@@ -59,8 +64,8 @@ export const getSongs = (releaseId) => {
     });
 };
 
-export const getLyrics = (artistName, artistTitle) => {
-  return fetch(`https://api.lyrics.ovh/v1/${artistName}/${artistTitle}`)
+export const getLyrics = (artistName, songTitle) => {
+  return fetch(`https://api.lyrics.ovh/v1/${artistName}/${songTitle}`)
     .then(res => {
       if(!res.ok) throw 'Unable to load lyrics, try again!';
 

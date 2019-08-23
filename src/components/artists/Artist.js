@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Artist({ 
   artistId,
   artistName, 
-  artistDeets = 'No details available for this artist' 
+  artistDeets = '' 
 }) {
   return (
     <>

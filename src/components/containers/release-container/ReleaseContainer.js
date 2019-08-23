@@ -53,7 +53,6 @@ export default class ReleaseContainer extends Component {
   }
 
   render() {
-    console.log(this.props.match.params.artistName)
     const { 
       releaseArray, 
       page, 
