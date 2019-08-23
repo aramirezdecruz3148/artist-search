@@ -41,8 +41,14 @@ export default class LyricContainer extends Component {
       error,
       loading
     } = this.state;
-
-    if(error) return <h1>Unable to load releases...</h1>;
+    
+    if(error) return (
+      <>
+        <Nav />
+        <h3>Sorry, the lyrics for this song are not available, why not try another?</h3>
+        <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>
+      </>
+    );
     if(loading) return <img alt='gif of someone listening to music' src='https://media.tenor.com/images/23110dfb65a7f1e3a52a02c41dcc7d2d/tenor.gif'/>;
 
     return (
